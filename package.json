@@ -1,0 +1,17 @@
+{
+  "name": "smart-parking-slot-booking",
+  "version": "1.0.0",
+  "description": "A simple Smart Parking Slot Booking System built with HTML, CSS, JavaScript and Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

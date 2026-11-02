@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Parking Slot Booking System" />
+  <title>ParkEase | Smart Parking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">P</span><span>Park<span class="brand-accent">Ease</span></span></a>
+    <nav><a href="#parking">Find Parking</a><a href="#my-bookings">My Bookings</a></nav>
+    <span class="live-label"><span></span> LIVE PARKING</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SMART PARKING, MADE SIMPLE</p>
+        <h1>Your space.<br><span>Your time.</span></h1>
+        <p class="hero-description">Find an available parking spot, reserve it in seconds, and arrive stress-free.</p>
+        <a class="primary-link" href="#parking">Explore parking <span>→</span></a>
+      </div>
+      <div class="hero-visual" aria-label="Parking illustration">
+        <div class="visual-glow"></div>
+        <div class="road">
+          <div class="road-line"></div>
+          <div class="parking-sign">P</div>
+          <div class="car car-one"><div class="car-window"></div><div class="wheel left"></div><div class="wheel right"></div></div>
+          <div class="car car-two"><div class="car-window"></div><div class="wheel left"></div><div class="wheel right"></div></div>
+          <div class="spot-number">A03</div>
+        </div>
+        <div class="floating-card"><span class="floating-check">✓</span><div><strong>Spot reserved!</strong><small>You're all set to go.</small></div></div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Parking summary">
+      <div><span class="stat-icon">▦</span><div><strong id="total-count">16</strong><small>Total spaces</small></div></div>
+      <div><span class="stat-icon available-icon">✓</span><div><strong id="available-count">—</strong><small>Available now</small></div></div>
+      <div><span class="stat-icon booked-icon">▣</span><div><strong id="booked-count">—</strong><small>Currently booked</small></div></div>
+    </section>
+
+    <section class="parking-section" id="parking">
+      <div class="section-heading">
+        <div><p class="eyebrow">CHOOSE YOUR SPACE</p><h2>Available parking</h2><p class="muted">Select a slot to view its booking options.</p></div>
+        <label class="filter-label">Filter by
+          <select id="floor-filter"><option value="All">All floors</option><option value="Ground Floor">Ground floor</option><option value="First Floor">First floor</option></select>
+        </label>
+      </div>
+      <div class="legend"><span><i class="legend-dot free"></i> Available</span><span><i class="legend-dot taken"></i> Booked</span><span><i class="legend-dot chosen"></i> Selected</span></div>
+      <div id="slot-grid" class="slot-grid"><p class="loading">Loading parking slots…</p></div>
+    </section>
+
+    <section class="booking-layout">
+      <div class="booking-info">
+        <p class="eyebrow">QUICK & EASY RESERVATION</p>
+        <h2>Book your<br>parking spot.</h2>
+        <p class="muted">Choose an available space and enter your details. Your reservation is saved by the server.</p>
+        <div class="info-note"><span>✦</span><p><strong>Good to know</strong><br>Each parking slot can have one active booking at a time in this demo.</p></div>
+      </div>
+      <form id="booking-form" class="booking-card">
+        <div class="form-title"><div><p class="eyebrow">RESERVATION DETAILS</p><h3>Complete your booking</h3></div><span class="form-step">01 / 01</span></div>
+        <div class="selected-slot"><span>Selected parking slot</span><strong id="selected-slot-label">Choose a slot above</strong></div>
+        <input type="hidden" id="slot-id" />
+        <label for="customer-name">Full name</label>
+        <input id="customer-name" name="customerName" type="text" placeholder="Enter your name" minlength="2" maxlength="80" required />
+        <label for="vehicle-number">Vehicle number</label>
+        <input id="vehicle-number" name="vehicleNumber" type="text" placeholder="e.g. KA01AB1234" maxlength="15" required />
+        <div class="form-row">
+          <div><label for="booking-date">Date</label><input id="booking-date" name="date" type="date" required /></div>
+          <div><label for="start-time">Start time</label><input id="start-time" name="startTime" type="time" value="09:00" required /></div>
+        </div>
+        <label for="end-time">End time</label>
+        <input id="end-time" name="endTime" type="time" value="10:00" required />
+        <button class="submit-button" type="submit">Confirm reservation <span>→</span></button>
+        <p class="form-footnote">Demo project · No real payment is collected.</p>
+      </form>
+    </section>
+
+    <section class="my-bookings" id="my-bookings">
+      <div class="section-heading"><div><p class="eyebrow">RESERVATION OVERVIEW</p><h2>Recent bookings</h2><p class="muted">Bookings currently stored in the application.</p></div><button id="refresh-button" class="secondary-button" type="button">↻ Refresh</button></div>
+      <div id="booking-list" class="booking-list"><p class="loading">Loading bookings…</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-icon">P</span><span>Park<span class="brand-accent">Ease</span></span></a><p>Smart parking for a smoother day.</p><small>Full Stack Technologies Project · HTML, CSS, JavaScript & Node.js</small></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

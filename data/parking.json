@@ -1,0 +1,85 @@
+{
+  "slots": [
+    {
+      "id": "A01",
+      "type": "EV",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "A02",
+      "type": "EV",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "A03",
+      "type": "Regular",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "A04",
+      "type": "Regular",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "A05",
+      "type": "Regular",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "A06",
+      "type": "Regular",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "A07",
+      "type": "Regular",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "A08",
+      "type": "Regular",
+      "floor": "Ground Floor"
+    },
+    {
+      "id": "B01",
+      "type": "Accessible",
+      "floor": "First Floor"
+    },
+    {
+      "id": "B02",
+      "type": "Accessible",
+      "floor": "First Floor"
+    },
+    {
+      "id": "B03",
+      "type": "Regular",
+      "floor": "First Floor"
+    },
+    {
+      "id": "B04",
+      "type": "Regular",
+      "floor": "First Floor"
+    },
+    {
+      "id": "B05",
+      "type": "Regular",
+      "floor": "First Floor"
+    },
+    {
+      "id": "B06",
+      "type": "Regular",
+      "floor": "First Floor"
+    },
+    {
+      "id": "B07",
+      "type": "Regular",
+      "floor": "First Floor"
+    },
+    {
+      "id": "B08",
+      "type": "Regular",
+      "floor": "First Floor"
+    }
+  ],
+  "bookings": []
+}
